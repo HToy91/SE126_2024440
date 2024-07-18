@@ -34,16 +34,19 @@ while ans == "y":#start of loop
         people = int(input("How many people are attending?: "))
         peopleDiff = int(difference(people, max_cap))#passes the function 
 
-        if people <= max_cap:
+        if people < max_cap:
             print(f'\nThe meeting "{meetingName}" meets fire safety regulations')
             print(f"You are still able to add {peopleDiff} people to the room and meet fire regulations")
 
+        elif people == max_cap:
+            print(f'\nThe meeting "{meetingName}" meets fire safety regulations')
+            
         else:
             print(f'\n*****Meeeting "{meetingName}" DOES NOT meet fire safety regulations!*****')
             print(f'\nYou must remove {abs(peopleDiff)} people from the meeting "{meetingName}"')#abs is absolute value so negative number comes out as distance from 0
 
-        question = input("\nWould you like to continue in the program and enter another meeting’s attendance information.[y/n]: ")
-        ans = decision(question).lower()#input for question runs through the function and passes to ans so it can restart or end loop
+        loopQuestion = input("\nWould you like to continue in the program and enter another meeting’s attendance information.[y/n]: ")
+        ans = decision(loopQuestion).lower()#input for question runs through the function and passes to ans so it can restart or end loop
 
     except ValueError: #if a ValueError comes up, it goes back to try:
         print("\n*****INVALID ENTRY*****")

@@ -85,3 +85,4 @@ for value in device:
         laptops += 1
         laptop_cost += 1500
 print(f"To replace {laptops} laptops it will cost $ {laptop_cost:5}.")
+print(f"TOTAL: $ {(laptop_cost) + (desktop_cost)}")

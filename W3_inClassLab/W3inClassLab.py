@@ -32,6 +32,7 @@ with open("W3_inClassLab/lab3a.csv") as list:
         #update the records value
         records += 1
 
+        #adds data to list
         if rec[0] == "D":
             device.append("Desktop")
         elif rec[0] == "L":
@@ -52,7 +53,8 @@ with open("W3_inClassLab/lab3a.csv") as list:
         ram.append(rec[3])
         first_disk.append(rec[4])
         num_disks.append(int(rec[5]))
-
+        
+        #not all records have 8 fields
         if int(rec[5]) == 1:
             second_disk.append("---")
             os.append(rec[6])
@@ -66,9 +68,12 @@ with open("W3_inClassLab/lab3a.csv") as list:
             os.append(" @ ")
             yr.append(f"rec# {records}-")
 
+#processes the lists to view their storage
 for i in range(0, len(device)):
+    #prints every index found in each list
     print(f"{device[i]:10} {brand[i]:10} {cpu[i]:10} {ram[i]:10} {first_disk[i]:10} {num_disks[i]}           {second_disk[i]:9} {os[i]:9} {yr[i]}")
 
+#starts value from 0 and number of items in list is passed
 desktops = 0
 desktop_cost = 0
 for i in range(0, len(device)):

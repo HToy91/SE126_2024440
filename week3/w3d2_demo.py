@@ -47,6 +47,16 @@ for value in names:
 
     elephant_count = 0
     for i in range(0, len(names)):
-        elephant_count += 1
+        if "elephant" in animals[i].lower():
+            elephant_count += 1
 
 print(f"There are {elephant_count} within the list.")
+
+#hand populated list:
+se126_roster = ["jared","Alex","Jose","Paige","Cooper","Braedin"]
+
+se126_2D = [
+    ["Jared", "SE126", "CYB300", "NE255", "ENG240"],
+    ["Jose", "SE111", "SE126", "NE121", "EN200"],
+    ["Alex", "SE111", "SE126", "NE121", "EN220"],
+]

@@ -26,10 +26,10 @@ voters = 0
 recProcessed = 0
 
 #empty list to append sums of previous variables
-cantRegA = []
-oldEnough_notRegA = []
-canVote_didntA = []
-votersA = []
+cantRegTotal = []
+oldEnough_notRegTotal = []
+canVote_didntTotal = []
+votersTotal = []
 
 with open("Labs/Lab3b/voters_202040.csv") as list:
     file = csv.reader(list)#assigns csv file to the variable file
@@ -50,17 +50,17 @@ with open("Labs/Lab3b/voters_202040.csv") as list:
             voters += 1
 
     #adds sums of values and then .append
-    cantRegA.append(cantReg)
-    oldEnough_notRegA.append(oldEnough_notReg)
-    canVote_didntA.append(canVote_didnt)
-    votersA.append(voters)
+    cantRegTotal.append(cantReg)
+    oldEnough_notRegTotal.append(oldEnough_notReg)
+    canVote_didntTotal.append(canVote_didnt)
+    votersTotal.append(voters)
 
     #processes the lists to view their storage
-    for i in range(0, len(cantRegA)):
-        print(f"                          Number of individuals not eligible to register: {cantRegA[i]:1}")
-        print(f"Number of individuals who are old enough to vote but have not registered: {oldEnough_notRegA[i]:1}")
-        print(f"         Number of individuals who are eligible to vote but did not vote: {canVote_didntA[i]:1}")
-        print(f"                                      Number of individuals who did vote: {votersA[i]:1}")
+    for i in range(0, len(cantRegTotal)):
+        print(f"                          Number of individuals not eligible to register: {cantRegTotal[i]:1}")
+        print(f"Number of individuals who are old enough to vote but have not registered: {oldEnough_notRegTotal[i]:1}")
+        print(f"         Number of individuals who are eligible to vote but did not vote: {canVote_didntTotal[i]:1}")
+        print(f"                                      Number of individuals who did vote: {votersTotal[i]:1}")
         print("-----------------------------------------------------------------------------")
 
     print(f"                                             Number of records processed: {recProcessed}")

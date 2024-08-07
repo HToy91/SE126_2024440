@@ -96,3 +96,24 @@ for i in range(0, len(numAvg)):
 classAvg = gradeTotal / len(numAvg)
 
 print(f"\nThere are {len(numAvg)} students in the class\n\tThe Class Average is: {classAvg:.1f}\n\n")
+
+studentInfo = []
+for i in range(0, len(firstNames)):
+    studentInfo.append([firstNames[i], lastNames[i], test1[i], test2[i], test3[i], numAvg[i], letAvg[i]])
+
+print(f"{"FIRST":10}\t{"LAST":10}\t{"T#1":3}\t{"T#2":3}\t{"T#3":3}\t{"AVG":5}\t{"LETTER":3}")
+print("--------------------------------------------------------------------------")
+
+for i in range(0, len(studentInfo)):
+
+    for x in range(0, len(studentInfo[i])):
+        if x < 2:
+            print(f"{studentInfo[i][x]:10}\t", end = "")
+        elif x == 6:
+            print(f"{studentInfo[i][x]}\t", end = "")
+        else:
+            print(f"{studentInfo[i][x]:5.1f}\t", end = "")
+            #end=" " removes new line at end of print()
+    print()#creates a new line before next list in list
+
+print("--------------------------------------------------------------------------")

@@ -34,12 +34,12 @@ for i in range(0, len(firstName)):
         houseMotto = "Ours is the fury"
 
     elif houseAllegiance[i] == "House Tully":
-        houseMotto = "Family, Duty. Honor"
+        houseMotto = "Family. Duty. Honor"
 
     elif houseAllegiance[i] == "Night's Watch":
         houseMotto = "And now my watch begins"
 
-    elif houseAllegiance[i] == "House Lanister":
+    elif houseAllegiance[i] == "House Lannister":
         houseMotto = "Hear me roar!"
 
     else:

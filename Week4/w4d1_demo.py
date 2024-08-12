@@ -30,7 +30,7 @@ with open("Week4/listPractice1.csv") as csvfile:
 
 print(f"{"FIRST":10}\t{"LAST":10}\t{"T#1":3}\t{"T#2":3}\t{"T#3":3}")
 print("--------------------------------------------------------------------------")
-#preocess lists --> FOR LOOP!
+#process lists --> FOR LOOP!
 for i in range(0, len(firstNames)):
     print(f"{firstNames[i]:10}\t{lastNames[i]:10}\t{test1[i]:3}\t{test2[i]:3}\t{test3[i]:3}")
 print("--------------------------------------------------------------------------")
@@ -62,7 +62,7 @@ for i in range(0, len(firstNames)):
 #reprocess to print and display new data
 print(f"{"FIRST":10}\t{"LAST":10}\t{"T#1":3}\t{"T#2":3}\t{"T#3":3}\t{"AVG":5}\t{"LETTER":3}")
 print("--------------------------------------------------------------------------")
-#preocess lists --> FOR LOOP!
+#process lists --> FOR LOOP!
 for i in range(0, len(numAvg)):
     print(f"{firstNames[i]:10}\t{lastNames[i]:10}\t{test1[i]:3}\t{test2[i]:3}\t{test3[i]:3}\t{numAvg[i]:5.1f}\t{letAvg[i]:3}")
 print("--------------------------------------------------------------------------")

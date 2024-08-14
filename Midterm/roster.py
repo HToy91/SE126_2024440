@@ -393,7 +393,7 @@ generate = input("\nWould you like to generate a starting line-up? [y/n]: ").low
 
 while generate != "y" and generate != "n":
     print("INVALID INPUT")
-    generate = input("Would you like to generate a starting line-up?: ").lower()
+    generate = input("Would you like to generate a starting line-up? [y/n]: ").lower()
 
 while generate == "y":
     name = input("\nPlease enter your name: ")
@@ -416,7 +416,7 @@ while generate == "y":
     roster.append(qb_starterChoice)
     print(f"Great Choice, you picked {qb_starterChoice} as your starting Quarterback!")
 
-    time.sleep(3)
+    time.sleep(2)
     clear_terminal()
 #-------------------------------
 
@@ -435,7 +435,7 @@ while generate == "y":
     roster.append(te_starterChoice)
     print(f"Great Choice, you picked {te_starterChoice} as your starting Tight End!")
 
-    time.sleep(3)
+    time.sleep(2)
     clear_terminal()
     #-------------------------------
 
@@ -454,7 +454,7 @@ while generate == "y":
     roster.append(rt_starterChoice)
     print(f"Great Choice, you picked {rt_starterChoice} as your starting Right Tackle!")
 
-    time.sleep(3)
+    time.sleep(2)
     clear_terminal()
     #-------------------------------
 
@@ -473,7 +473,7 @@ while generate == "y":
     roster.append(rg_starterChoice)
     print(f"Great Choice, you picked {rg_starterChoice} as your starting Right Guard!")
 
-    time.sleep(3)
+    time.sleep(2)
     clear_terminal()
     #-------------------------------
 
@@ -492,7 +492,7 @@ while generate == "y":
     roster.append(lt_starterChoice)
     print(f"Great Choice, you picked {lt_starterChoice} as your starting Left Tackle!")
 
-    time.sleep(3)
+    time.sleep(2)
     clear_terminal()
     #-------------------------------
 
@@ -511,7 +511,7 @@ while generate == "y":
     roster.append(lg_starterChoice)
     print(f"Great Choice, you picked {lg_starterChoice} as your starting Left Guard!")
 
-    time.sleep(3)
+    time.sleep(2)
     clear_terminal()
     #-------------------------------
 
@@ -530,7 +530,7 @@ while generate == "y":
     roster.append(c_starterChoice)
     print(f"Great Choice, you picked {c_starterChoice} as your starting Center!")
 
-    time.sleep(3)
+    time.sleep(2)
     clear_terminal()
     #-------------------------------
 
@@ -549,7 +549,7 @@ while generate == "y":
     roster.append(hb_starterChoice)
     print(f"Great Choice, you picked {hb_starterChoice} as your starting Halfback!")
 
-    time.sleep(3)
+    time.sleep(2)
     clear_terminal()
     #-------------------------------
 
@@ -568,7 +568,7 @@ while generate == "y":
     roster.append(wr_starterChoice)
     print(f"Great Choice, you picked {wr_starterChoice} as your starting Wide Receiver!")
 
-    time.sleep(3)
+    time.sleep(2)
     clear_terminal()
     #-------------------------------
 

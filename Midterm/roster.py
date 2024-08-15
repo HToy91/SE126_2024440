@@ -2,12 +2,140 @@
 #SE126 Midterm
 #08/13/2024
 
-#Program Prompt:
+#Program Prompt: For your Midterm Project in SE126 you will be building a program of your own design! You must work individually to design a program and file of your choosing.  The program must include the following:
 
-import random
+#a file to be read and processed, data stored into respective lists
+#.csv or .txt
+#import csv will work for both of these file types, but all data must be separated with a comma!
+#>= 2 lists
+#these can be populated from a file or by hand
+#showcase understanding of control flow structures
+#showcase understanding of self-built functions
+#Starting Documentation
+#include a brief program description
+#include a variable dictionary with data types including your lists!
+#Documentation for anything used not introduced in the course
+#Creativity!
+
+#Program Description: a program where you can view players for each position, look at their stats, and decide who you want for your starting line-up
+
+#Variable Dictionary
+#qbFirstName = []
+#qbLastName = []
+#qbOVR = [] #overall
+#qbSPD = [] #speed
+#qbSTR = [] #strength
+#qbAGI = [] #agility
+#qbJMP = [] #jumping
+#qbINJ = [] #injury
+#qbSTA = [] #stamina
+#teFirstName = []
+#teLastName = []
+#teOVR = [] #overall
+#teSPD = [] #speed
+#teSTR = [] #strength
+#teAGI = [] #agility
+#teJMP = [] #jumping
+#teINJ = [] #injury
+#teSTA = [] #stamina
+#rtFirstName = []
+#rtLastName = []
+#rtOVR = [] #overall
+#rtSPD = [] #speed
+#rtSTR = [] #strength
+#rtAGI = [] #agility
+#rtJMP = [] #jumping
+#rtINJ = [] #injury
+#rtSTA = [] #stamina
+#rgFirstName = []
+#rgLastName = []
+#rgOVR = [] #overall
+#rgSPD = [] #speed
+#rgSTR = [] #strength
+#rgAGI = [] #agility
+#rgJMP = [] #jumping
+#rgINJ = [] #injury
+#rgSTA = [] #stamina
+#ltFirstName = []
+#ltLastName = []
+#ltOVR = [] #overall
+#ltSPD = [] #speed
+#ltSTR = [] #strength
+#ltAGI = [] #agility
+#ltJMP = [] #jumping
+#ltINJ = [] #injury
+#ltSTA = [] #stamina
+#lgFirstName = []
+#lgLastName = []
+#lgOVR = [] #overall
+#lgSPD = [] #speed
+#lgSTR = [] #strength
+#lgAGI = [] #agility
+#lgJMP = [] #jumping
+#lgINJ = [] #injury
+#lgSTA = [] #stamina
+#cFirstName = []
+#cLastName = []
+#cOVR = [] #overall
+#cSPD = [] #speed
+#cSTR = [] #strength
+#cAGI = [] #agility
+#cJMP = [] #jumping
+#cINJ = [] #injury
+#cSTA = [] #stamina
+#hbFirstName = []
+#hbLastName = []
+#hbOVR = [] #overall
+#hbSPD = [] #speed
+#hbSTR = [] #strength
+#hbAGI = [] #agility
+#hbJMP = [] #jumping
+#hbINJ = [] #injury
+#hbSTA = [] #stamina
+#wrFirstName = []
+#wrLastName = []
+#wrOVR = [] #overall
+#wrSPD = [] #speed
+#wrSTR = [] #strength
+#wrAGI = [] #agility
+#wrJMP = [] #jumping
+#wrINJ = [] #injury
+#wrSTA = [] #stamina
+#generate = input("\nWould you like to generate a starting line-up? [y/n]: ").lower()
+#name = input("\nPlease enter your name: ")
+#qbStats = []
+#roster = []
+#qb_playerChoice = input("\nPlease enter last name of starting quarterback: ").lower()
+#qb_starterChoice = qbDecision(qb_playerChoice)
+#teStats = []
+#te_playerChoice = input("\nPlease enter last name of starting tight end: ").lower()
+#te_starterChoice = teDecision(te_playerChoice)
+#rtStats = []
+#rt_playerChoice = input("\nPlease enter last name of starting right tackle: ").lower()
+#rt_starterChoice = rtDecision(rt_playerChoice)
+#rgStats = []
+#rg_playerChoice = input("\nPlease enter last name of starting right guard: ").lower()
+#rg_starterChoice = rgDecision(rg_playerChoice)
+#ltStats = []
+#lt_playerChoice = input("\nPlease enter last name of starting left tackle: ").lower()
+#lt_starterChoice = ltDecision(lt_playerChoice)
+#lgStats = []
+#lg_playerChoice = input("\nPlease enter last name of starting left guard: ").lower()
+#lg_starterChoice = lgDecision(lg_playerChoice)
+#cStats = []
+#c_playerChoice = input("\nPlease enter first and last name of starting center: ").lower()
+#c_starterChoice = cDecision(c_playerChoice)
+#hbStats = []
+#hb_playerChoice = input("\nPlease enter last name of starting halfback: ").lower()
+#hb_starterChoice = hbDecision(hb_playerChoice)
+#wrStats = []
+#wr_playerChoice = input("\nPlease enter last name of starting wide receiver: ").lower()
+#wr_starterChoice = wrDecision(wr_playerChoice)
+#roster_str = ', '.join(roster)
+
 import csv
-import os
-import time
+import os#needed to for clear screen function
+import time#needed for a time delay when screen is cleared
 
 qbFirstName = []
 qbLastName = []
@@ -244,7 +372,7 @@ with open("Midterm/wr.csv") as wr_csvfile:
 #disconnect---------
 
 #Functions----------
-def clear_terminal():
+def clear_terminal():#clears terminal
     os.system('cls' if os.name == 'nt' else 'clear')
 
 def qbDecision(qbChoice):
@@ -284,7 +412,7 @@ def rtDecision(rtChoice):
         rtChoice = rtFirstName[0] + rtLastName[0]
     elif rtChoice == "anderson":
         rtChoice = rtFirstName[1] + rtLastName[1]
-    elif rtChoice == "wheatley" or rtChoice == "wheatley jr.":
+    elif rtChoice == "wheatley" or rtChoice == "wheatley jr." or rtChoice == "wheatley jr":
         rtChoice = rtFirstName[2] + rtLastName[2]
     else:
         print("INVALID ENTRY")
@@ -370,17 +498,17 @@ def wrDecision(wrChoice):
         wrChoice = wrFirstName[4] + wrLastName[4]
     elif wrChoice == "reagor":
         wrChoice = wrFirstName[5] + wrLastName[5]
-    elif wrChoice == "baker":
+    elif wrChoice == "javon baker":
         wrChoice = wrFirstName[6] + wrLastName[6]
     elif wrChoice == "thornton":
         wrChoice = wrFirstName[7] + wrLastName[7]
     elif wrChoice == "boutte":
         wrChoice = wrFirstName[8] + wrLastName[8]
-    elif wrChoice == "baker":
+    elif wrChoice == " kawaan baker":
         wrChoice = wrFirstName[9] + wrLastName[9]
     else:
         print("INVALID ENTRY")
-        wrChoice = input("Please enter last name of wide receiver: ").lower()
+        wrChoice = input("Please enter last name of wide receiver, if last name is the same as another player then enter first and last: ").lower()
 
     return wrChoice
 #---------------------------------------
@@ -416,7 +544,7 @@ while generate == "y":
     roster.append(qb_starterChoice)
     print(f"Great Choice, you picked {qb_starterChoice} as your starting Quarterback!")
 
-    time.sleep(2)
+    time.sleep(2)#delays clearing terminal
     clear_terminal()
 #-------------------------------
 
@@ -435,7 +563,7 @@ while generate == "y":
     roster.append(te_starterChoice)
     print(f"Great Choice, you picked {te_starterChoice} as your starting Tight End!")
 
-    time.sleep(2)
+    time.sleep(2)#delays clearing terminal
     clear_terminal()
     #-------------------------------
 
@@ -454,7 +582,7 @@ while generate == "y":
     roster.append(rt_starterChoice)
     print(f"Great Choice, you picked {rt_starterChoice} as your starting Right Tackle!")
 
-    time.sleep(2)
+    time.sleep(2)#delays clearing terminal
     clear_terminal()
     #-------------------------------
 
@@ -473,7 +601,7 @@ while generate == "y":
     roster.append(rg_starterChoice)
     print(f"Great Choice, you picked {rg_starterChoice} as your starting Right Guard!")
 
-    time.sleep(2)
+    time.sleep(2)#delays clearing terminal
     clear_terminal()
     #-------------------------------
 
@@ -492,7 +620,7 @@ while generate == "y":
     roster.append(lt_starterChoice)
     print(f"Great Choice, you picked {lt_starterChoice} as your starting Left Tackle!")
 
-    time.sleep(2)
+    time.sleep(2)#delays clearing terminal
     clear_terminal()
     #-------------------------------
 
@@ -511,7 +639,7 @@ while generate == "y":
     roster.append(lg_starterChoice)
     print(f"Great Choice, you picked {lg_starterChoice} as your starting Left Guard!")
 
-    time.sleep(2)
+    time.sleep(2)#delays clearing terminal
     clear_terminal()
     #-------------------------------
 
@@ -530,7 +658,7 @@ while generate == "y":
     roster.append(c_starterChoice)
     print(f"Great Choice, you picked {c_starterChoice} as your starting Center!")
 
-    time.sleep(2)
+    time.sleep(2)#delays clearing terminal
     clear_terminal()
     #-------------------------------
 
@@ -549,7 +677,7 @@ while generate == "y":
     roster.append(hb_starterChoice)
     print(f"Great Choice, you picked {hb_starterChoice} as your starting Halfback!")
 
-    time.sleep(2)
+    time.sleep(2)#delays clearing terminal
     clear_terminal()
     #-------------------------------
 
@@ -563,16 +691,16 @@ while generate == "y":
     for i in range(0, len(wrFirstName)):
         wrStats.append([wrFirstName[i], wrLastName[i], wrOVR[i], wrSPD[i], wrSTR[i], wrAGI[i], wrJMP[i], wrINJ[i], wrSTA[i]])
 
-    wr_playerChoice = input("\nPlease enter last name of starting wide receiver: ").lower()
+    wr_playerChoice = input("\nPlease enter last name of starting wide receiver, if last name is the same as another player then enter first and last: ").lower()
     wr_starterChoice = wrDecision(wr_playerChoice)
     roster.append(wr_starterChoice)
     print(f"Great Choice, you picked {wr_starterChoice} as your starting Wide Receiver!")
 
-    time.sleep(2)
+    time.sleep(2)#delays clearing terminal
     clear_terminal()
     #-------------------------------
 
-    roster_str = ', '.join(roster)
+    roster_str = ', '.join(roster)#gets rid of brackets and single quotes 
     print(f"You're starting roster is {roster_str}")
     print(f"\nThank you for using our generator {name}")
 

@@ -24,3 +24,105 @@
 #	Row 6 – Row 10 are $175.00
 #	Row 11 – Row 15 are $150.00
 
+import csv
+
+rows = []
+seatsA = []
+seatsB = []
+seatsC = []
+seatsD = []
+seatsE = []
+seatsF = []
+seatsG = []
+seatsH = []
+row1 = []
+seatsI = []
+seatsJ = []
+seatsK = []
+seatsL = []
+seatsM = []
+seatsN = []
+seatsO = []
+seatsP = []
+seatsQ = []
+seatsR = []
+seatsS = []
+seatsT = []
+seatsU = []
+seatsV = []
+row2 = []
+seatsW = []
+seatsX = []
+seatsY = []
+seatsZ = []
+seats1 = []
+seats2 = []
+seats3 = []
+seats4 = []
+
+#connect to file----------------------------
+with open("Labs/W5Lab_theaterSeatingChart/seatingChart.csv") as csvfile:
+    file = csv.reader(csvfile)
+
+#
+    for rec in file:
+        seatsA.append(rec[0])
+        seatsB.append(rec[1])
+        seatsC.append(rec[2])
+        seatsD.append(rec[3])
+        seatsE.append(rec[4])
+        seatsF.append(rec[5])
+        seatsG.append(rec[6])
+        seatsH.append(rec[7])
+        row1.append(rec[8])
+        seatsI.append(rec[9])
+        seatsJ.append(rec[10])
+        seatsK.append(rec[11])
+        seatsL.append(rec[12])
+        seatsM.append(rec[13])
+        seatsN.append(rec[14])
+        seatsO.append(rec[15])
+        seatsP.append(rec[16])
+        seatsQ.append(rec[17])
+        seatsR.append(rec[18])
+        seatsS.append(rec[19])
+        seatsT.append(rec[20])
+        seatsU.append(rec[21])
+        seatsV.append(rec[22])
+        row2.append(rec[23])
+        seatsW.append(rec[24])
+        seatsX.append(rec[25])
+        seatsY.append(rec[26])
+        seatsZ.append(rec[27])
+        seats1.append(rec[28])
+        seats2.append(rec[29])
+        seats3.append(rec[30])
+        seats4.append(rec[31])
+#disconnect----------------------
+
+
+print(f"{"ROW":33} SEATS")
+print(f"     A B C D E F G H   I J K L M N O P Q R S T U V   W X Y Z 1 2 3 4")
+
+for i in range(0, len(seatsA)):
+    print(f"{i + 1:3}  {seatsA[i]} {seatsB[i]} {seatsC[i]} {seatsD[i]} {seatsE[i]} {seatsF[i]} {seatsG[i]} {seatsH[i]} {row1[i]} {seatsI[i]} {seatsJ[i]} {seatsK[i]} {seatsL[i]} {seatsM[i]} {seatsN[i]} {seatsO[i]} {seatsP[i]} {seatsQ[i]} {seatsR[i]} {seatsS[i]} {seatsT[i]} {seatsU[i]} {seatsV[i]} {row2[i]} {seatsW[i]} { seatsX[i]} {seatsY[i]} {seatsZ[i]} {seats1[i]} {seats2[i]} {seats3[i]} {seats4[i]}")
+choice = input("\nWould you like to purchase a ticket?[y/n]: ").lower()
+while choice == "y":
+    seatPick = input("Please enter seat section[A-Z,1-4]: ").lower()
+    rowPick = input("Please enter row number[1-15]: ")
+
+    for i in range(0, 1):
+        if seatPick == "a":
+            if rowPick == "1":
+                if seatsA[0] != "X":
+                    seatsA[0] = "X"
+
+                else: print("Seat is taken")
+
+    print(f"{"ROW":33} SEATS")
+    print(f"     A B C D E F G H   I J K L M N O P Q R S T U V   W X Y Z 1 2 3 4")
+
+    for i in range(0, len(seatsA)):
+        print(f"{i + 1:3}  {seatsA[i]} {seatsB[i]} {seatsC[i]} {seatsD[i]} {seatsE[i]} {seatsF[i]} {seatsG[i]} {seatsH[i]} {row1[i]} {seatsI[i]} {seatsJ[i]} {seatsK[i]} {seatsL[i]} {seatsM[i]} {seatsN[i]} {seatsO[i]} {seatsP[i]} {seatsQ[i]} {seatsR[i]} {seatsS[i]} {seatsT[i]} {seatsU[i]} {seatsV[i]} {row2[i]} {seatsW[i]} { seatsX[i]} {seatsY[i]} {seatsZ[i]} {seats1[i]} {seats2[i]} {seats3[i]} {seats4[i]}")
+
+    choice = input("\nWould you like to purchase another ticket?[y/n]: ").lower()

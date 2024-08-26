@@ -25,6 +25,8 @@
 #	Row 11 – Row 15 are $150.00
 
 import csv
+import os#needed to for clear screen function
+import time#needed for a time delay when screen is cleared
 
 rows = []
 seatsA = []
@@ -59,6 +61,12 @@ seats1 = []
 seats2 = []
 seats3 = []
 seats4 = []
+
+row1_5Cost = 200
+row6_10Cost = 175
+row11_15Cost = 150
+totalCost = 0
+ticketCounter = 0
 
 #connect to file----------------------------
 with open("Labs/W5Lab_theaterSeatingChart/seatingChart.csv") as csvfile:
@@ -100,24 +108,121 @@ with open("Labs/W5Lab_theaterSeatingChart/seatingChart.csv") as csvfile:
         seats4.append(rec[31])
 #disconnect----------------------
 
+def clear_terminal():#clears terminal
+    os.system('cls' if os.name == 'nt' else 'clear')
 
-print(f"{"ROW":33} SEATS")
-print(f"     A B C D E F G H   I J K L M N O P Q R S T U V   W X Y Z 1 2 3 4")
+def menu():
+    print("Welcome to Ticket Master!")
+    print("--------------------------------")
+    print("1. Purchase Seat(s)\n2. View Total Ticket Sales\n3. View Sales Information\n4. Checkout\n5. Quit\n\n")
+    
+    menuInput = input("Please Select Menu Option[1-5]: ")
 
-for i in range(0, len(seatsA)):
-    print(f"{i + 1:3}  {seatsA[i]} {seatsB[i]} {seatsC[i]} {seatsD[i]} {seatsE[i]} {seatsF[i]} {seatsG[i]} {seatsH[i]} {row1[i]} {seatsI[i]} {seatsJ[i]} {seatsK[i]} {seatsL[i]} {seatsM[i]} {seatsN[i]} {seatsO[i]} {seatsP[i]} {seatsQ[i]} {seatsR[i]} {seatsS[i]} {seatsT[i]} {seatsU[i]} {seatsV[i]} {row2[i]} {seatsW[i]} { seatsX[i]} {seatsY[i]} {seatsZ[i]} {seats1[i]} {seats2[i]} {seats3[i]} {seats4[i]}")
-choice = input("\nWould you like to purchase a ticket?[y/n]: ").lower()
-while choice == "y":
-    seatPick = input("Please enter seat section[A-Z,1-4]: ").lower()
+    return menuInput
+
+
+
+
+time.sleep(1)#delays clearing terminal
+clear_terminal()
+
+menuInput = menu()
+
+time.sleep(1)#delays clearing terminal
+clear_terminal()
+
+while menuInput not in {"1","2","3","4","5"}:
+    print("INVALID ENTRY")
+
+    time.sleep(1)#delays clearing terminal
+    clear_terminal()
+
+    menuInput = menu()
+
+while menuInput == "1":
+
+    print(f"\n{"ROW":33} SEATS")
+    print(f"     A B C D E F G H   I J K L M N O P Q R S T U V   W X Y Z 1 2 3 4")
+
+    for i in range(0, len(seatsA)):
+        print(f"{i + 1:3}  {seatsA[i]} {seatsB[i]} {seatsC[i]} {seatsD[i]} {seatsE[i]} {seatsF[i]} {seatsG[i]} {seatsH[i]} {row1[i]} {seatsI[i]} {seatsJ[i]} {seatsK[i]} {seatsL[i]} {seatsM[i]} {seatsN[i]} {seatsO[i]} {seatsP[i]} {seatsQ[i]} {seatsR[i]} {seatsS[i]} {seatsT[i]} {seatsU[i]} {seatsV[i]} {row2[i]} {seatsW[i]} { seatsX[i]} {seatsY[i]} {seatsZ[i]} {seats1[i]} {seats2[i]} {seats3[i]} {seats4[i]}")
+
+    seatPick = input("\nPlease enter seat section[A-Z,1-4]: ").lower()
+    while seatPick not in {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","1","2","3","4"}:
+        print("INVALID ENTRY")
+
+        time.sleep(1)#delays clearing terminal
+        clear_terminal()
+
+        print(f"{"ROW":33} SEATS")
+        print(f"     A B C D E F G H   I J K L M N O P Q R S T U V   W X Y Z 1 2 3 4")
+
+        for i in range(0, len(seatsA)):
+            print(f"{i + 1:3}  {seatsA[i]} {seatsB[i]} {seatsC[i]} {seatsD[i]} {seatsE[i]} {seatsF[i]} {seatsG[i]} {seatsH[i]} {row1[i]} {seatsI[i]} {seatsJ[i]} {seatsK[i]} {seatsL[i]} {seatsM[i]} {seatsN[i]} {seatsO[i]} {seatsP[i]} {seatsQ[i]} {seatsR[i]} {seatsS[i]} {seatsT[i]} {seatsU[i]} {seatsV[i]} {row2[i]} {seatsW[i]} { seatsX[i]} {seatsY[i]} {seatsZ[i]} {seats1[i]} {seats2[i]} {seats3[i]} {seats4[i]}")
+
+        seatPick = input("\nPlease enter seat section[A-Z,1-4]: ").lower()
+
     rowPick = input("Please enter row number[1-15]: ")
+    while rowPick not in {"1","2","3","4","5","6","7","8","9","10","11","12","13","14","15"}:
+        print("INVALID ENTRY")
 
-    for i in range(0, 1):
-        if seatPick == "a":
-            if rowPick == "1":
-                if seatsA[0] != "X":
-                    seatsA[0] = "X"
+        time.sleep(1)#delays clearing terminal
+        clear_terminal()
 
-                else: print("Seat is taken")
+        print(f"{"ROW":33} SEATS")
+        print(f"     A B C D E F G H   I J K L M N O P Q R S T U V   W X Y Z 1 2 3 4")
+
+        for i in range(0, len(seatsA)):
+            print(f"{i + 1:3}  {seatsA[i]} {seatsB[i]} {seatsC[i]} {seatsD[i]} {seatsE[i]} {seatsF[i]} {seatsG[i]} {seatsH[i]} {row1[i]} {seatsI[i]} {seatsJ[i]} {seatsK[i]} {seatsL[i]} {seatsM[i]} {seatsN[i]} {seatsO[i]} {seatsP[i]} {seatsQ[i]} {seatsR[i]} {seatsS[i]} {seatsT[i]} {seatsU[i]} {seatsV[i]} {row2[i]} {seatsW[i]} { seatsX[i]} {seatsY[i]} {seatsZ[i]} {seats1[i]} {seats2[i]} {seats3[i]} {seats4[i]}")
+        
+        print(f"\nYou have chosen Seat Section {seatPick}")
+        rowPick = input("Please enter row number[1-15]: ")
+
+        time.sleep(1)#delays clearing terminal
+        clear_terminal()
+
+    
+    if seatPick in {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","1","2","3","4"}:
+        
+        if int(rowPick) in {1,2,3,4,5,6,7,8,9,10,11,12,14,15}:
+            #section a --------------------------------------------------------------------
+            if seatPick == "a":
+                if seatsA[int(rowPick) - 1] != "X":
+                    if int(rowPick) in {1,2,3,4,5}:
+                        totalCost += row1_5Cost
+                    elif int(rowPick) in {6,7,8,9,10}:
+                        totalCost += row6_10Cost
+                    elif int(rowPick) in {11,12,13,14,15}:
+                        totalCost += row11_15Cost
+
+                    seatsA[int(rowPick) - 1] = "X"
+                    ticketCounter += 1
+                    print(f"\nSeat is booked! Amount due: ${totalCost:.2f}\n")
+
+                else: print("\nSeat is taken, please pick another seat\n")
+                time.sleep(2)#delays clearing terminal
+                clear_terminal()
+
+
+            #section b --------------------------------------------------------------------   
+            elif seatPick == "b":
+                if seatsB[int(rowPick) - 1] != "X":
+                    if int(rowPick) in {1,2,3,4,5}:
+                        totalCost += row1_5Cost
+                    elif int(rowPick) in {6,7,8,9,10}:
+                        totalCost += row6_10Cost
+                    elif int(rowPick) in {11,12,13,14,15}:
+                        totalCost += row11_15Cost
+
+                    seatsB[rowPick - 1] = "X"
+                    print(f"\nSeat is booked! Amount due: ${totalCost:.2f}\n")
+
+                else: print("\nSeat is taken, please pick another seat\n")
+
+    else: print("INVALID ENTRY")
+    time.sleep(1)#delays clearing terminal
+    clear_terminal()
+
 
     print(f"{"ROW":33} SEATS")
     print(f"     A B C D E F G H   I J K L M N O P Q R S T U V   W X Y Z 1 2 3 4")
@@ -125,4 +230,24 @@ while choice == "y":
     for i in range(0, len(seatsA)):
         print(f"{i + 1:3}  {seatsA[i]} {seatsB[i]} {seatsC[i]} {seatsD[i]} {seatsE[i]} {seatsF[i]} {seatsG[i]} {seatsH[i]} {row1[i]} {seatsI[i]} {seatsJ[i]} {seatsK[i]} {seatsL[i]} {seatsM[i]} {seatsN[i]} {seatsO[i]} {seatsP[i]} {seatsQ[i]} {seatsR[i]} {seatsS[i]} {seatsT[i]} {seatsU[i]} {seatsV[i]} {row2[i]} {seatsW[i]} { seatsX[i]} {seatsY[i]} {seatsZ[i]} {seats1[i]} {seats2[i]} {seats3[i]} {seats4[i]}")
 
-    choice = input("\nWould you like to purchase another ticket?[y/n]: ").lower()
+    menuInput = input("\nWould you like to purchase another ticket?[1. yes 2. no]: ")
+    while menuInput not in {"1","2"}:
+        print("INVALID ENTRY")
+        time.sleep(1)#delays clearing terminal
+        clear_terminal()
+        menuInput = input("\nWould you like to purchase another ticket?[1. yes 2. no]: ")
+
+        time.sleep(1)#delays clearing terminal
+        clear_terminal()
+
+
+time.sleep(1)#delays clearing terminal
+clear_terminal()
+
+menu()
+
+#while menuInput == "2":
+
+
+print(f"Total Amount Due: ${totalCost:.2f}")
+print("\nThank You for using SeatMaster")

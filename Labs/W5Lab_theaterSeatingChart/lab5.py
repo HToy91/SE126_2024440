@@ -360,7 +360,7 @@ while flag == "green":
                     else: print("\nSeat is taken, please pick another seat\n")
                     time.sleep(2)#delays clearing terminal
                     clear_terminal()
-                #section a end-----------------------------------------------------------------
+                #section c end-----------------------------------------------------------------
 
         else: print("INVALID ENTRY")
         time.sleep(1)#delays clearing terminal

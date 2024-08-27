@@ -184,10 +184,10 @@ while answer.lower() == "y":
                 if section_choice == "a":#------------------------------->CHANGE LINE
                     if seatsA[int(row_choice) - 1] != "X":#------------------------------->CHANGE LINE
                         if int(row_choice) in {1,2,3,4,5}:
-                                totalCost += 200
+                            totalCost += 200
                         elif int(row_choice) in {6,7,8,9,10}:
                             totalCost += 175
-                        else:
+                        elif int(row_choice) in {11,12,13,14,15}:
                             totalCost += 150
 
                         seatsA[int(row_choice) - 1] = "X"#------------------------------->CHANGE LINE
@@ -222,8 +222,8 @@ while answer.lower() == "y":
                             row13Available -= 1
                         elif (int(row_choice) - 1) == 13:
                             row14Available -= 1
-                        else:
-                            row15Available -= 1()
+                        elif (int(row_choice) - 1) == 14:
+                            row15Available -= 1
 
                         allSeats_chosen.append(seats_chose)
                         print(f"\nSeat {seats_chose} has been booked")
@@ -280,7 +280,7 @@ while answer.lower() == "y":
                         elif (int(row_choice) - 1) == 13:
                             row14Available -= 1
                         else:
-                            row15Available -= 1()
+                            row15Available -= 1
 
                         allSeats_chosen.append(seats_chose)
                         print(f"\nSeat {seats_chose} has been booked")
@@ -337,7 +337,7 @@ while answer.lower() == "y":
                         elif (int(row_choice) - 1) == 13:
                             row14Available -= 1
                         else:
-                            row15Available -= 1()
+                            row15Available -= 1
 
                         allSeats_chosen.append(seats_chose)
                         print(f"\nSeat {seats_chose} has been booked")
@@ -394,7 +394,7 @@ while answer.lower() == "y":
                         elif (int(row_choice) - 1) == 13:
                             row14Available -= 1
                         else:
-                            row15Available -= 1()
+                            row15Available -= 1
 
                         allSeats_chosen.append(seats_chose)
                         print(f"\nSeat {seats_chose} has been booked")
@@ -451,7 +451,7 @@ while answer.lower() == "y":
                         elif (int(row_choice) - 1) == 13:
                             row14Available -= 1
                         else:
-                            row15Available -= 1()
+                            row15Available -= 1
 
                         allSeats_chosen.append(seats_chose)
                         print(f"\nSeat {seats_chose} has been booked")
@@ -508,7 +508,7 @@ while answer.lower() == "y":
                         elif (int(row_choice) - 1) == 13:
                             row14Available -= 1
                         else:
-                            row15Available -= 1()
+                            row15Available -= 1
 
                         allSeats_chosen.append(seats_chose)
                         print(f"\nSeat {seats_chose} has been booked")
@@ -565,7 +565,7 @@ while answer.lower() == "y":
                         elif (int(row_choice) - 1) == 13:
                             row14Available -= 1
                         else:
-                            row15Available -= 1()
+                            row15Available -= 1
 
                         allSeats_chosen.append(seats_chose)
                         print(f"\nSeat {seats_chose} has been booked")
@@ -622,7 +622,7 @@ while answer.lower() == "y":
                         elif (int(row_choice) - 1) == 13:
                             row14Available -= 1
                         else:
-                            row15Available -= 1()
+                            row15Available -= 1
 
                         allSeats_chosen.append(seats_chose)
                         print(f"\nSeat {seats_chose} has been booked")
@@ -679,7 +679,7 @@ while answer.lower() == "y":
                         elif (int(row_choice) - 1) == 13:
                             row14Available -= 1
                         else:
-                            row15Available -= 1()
+                            row15Available -= 1
 
                         allSeats_chosen.append(seats_chose)
                         print(f"\nSeat {seats_chose} has been booked")
@@ -736,7 +736,7 @@ while answer.lower() == "y":
                         elif (int(row_choice) - 1) == 13:
                             row14Available -= 1
                         else:
-                            row15Available -= 1()
+                            row15Available -= 1
 
                         allSeats_chosen.append(seats_chose)
                         print(f"\nSeat {seats_chose} has been booked")
@@ -793,7 +793,7 @@ while answer.lower() == "y":
                         elif (int(row_choice) - 1) == 13:
                             row14Available -= 1
                         else:
-                            row15Available -= 1()
+                            row15Available -= 1
 
                         allSeats_chosen.append(seats_chose)
                         print(f"\nSeat {seats_chose} has been booked")
@@ -850,7 +850,7 @@ while answer.lower() == "y":
                         elif (int(row_choice) - 1) == 13:
                             row14Available -= 1
                         else:
-                            row15Available -= 1()
+                            row15Available -= 1
 
                         allSeats_chosen.append(seats_chose)
                         print(f"\nSeat {seats_chose} has been booked")
@@ -907,7 +907,7 @@ while answer.lower() == "y":
                         elif (int(row_choice) - 1) == 13:
                             row14Available -= 1
                         else:
-                            row15Available -= 1()
+                            row15Available -= 1
 
                         allSeats_chosen.append(seats_chose)
                         print(f"\nSeat {seats_chose} has been booked")
@@ -964,7 +964,7 @@ while answer.lower() == "y":
                         elif (int(row_choice) - 1) == 13:
                             row14Available -= 1
                         else:
-                            row15Available -= 1()
+                            row15Available -= 1
 
                         allSeats_chosen.append(seats_chose)
                         print(f"\nSeat {seats_chose} has been booked")
@@ -982,10 +982,10 @@ while answer.lower() == "y":
                 if section_choice == "o":#------------------------------->CHANGE LINE
                     if seatsO[int(row_choice) - 1] != "X":#------------------------------->CHANGE LINE
                         if int(row_choice) in {1,2,3,4,5}:
-                                totalCost += 200
+                            totalCost += 200
                         elif int(row_choice) in {6,7,8,9,10}:
                             totalCost += 175
-                        else:
+                        elif int(row_choice) in {11,12,13,14,15}:
                             totalCost += 150
 
                         seatsO[int(row_choice) - 1] = "X"#------------------------------->CHANGE LINE
@@ -1021,7 +1021,7 @@ while answer.lower() == "y":
                         elif (int(row_choice) - 1) == 13:
                             row14Available -= 1
                         else:
-                            row15Available -= 1()
+                            row15Available -= 1
 
                         allSeats_chosen.append(seats_chose)
                         print(f"\nSeat {seats_chose} has been booked")
@@ -1078,7 +1078,7 @@ while answer.lower() == "y":
                         elif (int(row_choice) - 1) == 13:
                             row14Available -= 1
                         else:
-                            row15Available -= 1()
+                            row15Available -= 1
 
                         allSeats_chosen.append(seats_chose)
                         print(f"\nSeat {seats_chose} has been booked")
@@ -1135,7 +1135,7 @@ while answer.lower() == "y":
                         elif (int(row_choice) - 1) == 13:
                             row14Available -= 1
                         else:
-                            row15Available -= 1()
+                            row15Available -= 1
 
                         allSeats_chosen.append(seats_chose)
                         print(f"\nSeat {seats_chose} has been booked")
@@ -1192,7 +1192,7 @@ while answer.lower() == "y":
                         elif (int(row_choice) - 1) == 13:
                             row14Available -= 1
                         else:
-                            row15Available -= 1()
+                            row15Available -= 1
 
                         allSeats_chosen.append(seats_chose)
                         print(f"\nSeat {seats_chose} has been booked")
@@ -1249,7 +1249,7 @@ while answer.lower() == "y":
                         elif (int(row_choice) - 1) == 13:
                             row14Available -= 1
                         else:
-                            row15Available -= 1()
+                            row15Available -= 1
 
                         allSeats_chosen.append(seats_chose)
                         print(f"\nSeat {seats_chose} has been booked")
@@ -1306,7 +1306,7 @@ while answer.lower() == "y":
                         elif (int(row_choice) - 1) == 13:
                             row14Available -= 1
                         else:
-                            row15Available -= 1()
+                            row15Available -= 1
 
                         allSeats_chosen.append(seats_chose)
                         print(f"\nSeat {seats_chose} has been booked")
@@ -1363,7 +1363,7 @@ while answer.lower() == "y":
                         elif (int(row_choice) - 1) == 13:
                             row14Available -= 1
                         else:
-                            row15Available -= 1()
+                            row15Available -= 1
 
                         allSeats_chosen.append(seats_chose)
                         print(f"\nSeat {seats_chose} has been booked")
@@ -1420,7 +1420,7 @@ while answer.lower() == "y":
                         elif (int(row_choice) - 1) == 13:
                             row14Available -= 1
                         else:
-                            row15Available -= 1()
+                            row15Available -= 1
 
                         allSeats_chosen.append(seats_chose)
                         print(f"\nSeat {seats_chose} has been booked")
@@ -1477,7 +1477,7 @@ while answer.lower() == "y":
                         elif (int(row_choice) - 1) == 13:
                             row14Available -= 1
                         else:
-                            row15Available -= 1()
+                            row15Available -= 1
 
                         allSeats_chosen.append(seats_chose)
                         print(f"\nSeat {seats_chose} has been booked")
@@ -1534,7 +1534,7 @@ while answer.lower() == "y":
                         elif (int(row_choice) - 1) == 13:
                             row14Available -= 1
                         else:
-                            row15Available -= 1()
+                            row15Available -= 1
 
                         allSeats_chosen.append(seats_chose)
                         print(f"\nSeat {seats_chose} has been booked")
@@ -1591,7 +1591,7 @@ while answer.lower() == "y":
                         elif (int(row_choice) - 1) == 13:
                             row14Available -= 1
                         else:
-                            row15Available -= 1()
+                            row15Available -= 1
 
                         allSeats_chosen.append(seats_chose)
                         print(f"\nSeat {seats_chose} has been booked")
@@ -1648,7 +1648,7 @@ while answer.lower() == "y":
                         elif (int(row_choice) - 1) == 13:
                             row14Available -= 1
                         else:
-                            row15Available -= 1()
+                            row15Available -= 1
 
                         allSeats_chosen.append(seats_chose)
                         print(f"\nSeat {seats_chose} has been booked")
@@ -1705,7 +1705,7 @@ while answer.lower() == "y":
                         elif (int(row_choice) - 1) == 13:
                             row14Available -= 1
                         else:
-                            row15Available -= 1()
+                            row15Available -= 1
 
                         allSeats_chosen.append(seats_chose)
                         print(f"\nSeat {seats_chose} has been booked")
@@ -1762,7 +1762,7 @@ while answer.lower() == "y":
                         elif (int(row_choice) - 1) == 13:
                             row14Available -= 1
                         else:
-                            row15Available -= 1()
+                            row15Available -= 1
 
                         allSeats_chosen.append(seats_chose)
                         print(f"\nSeat {seats_chose} has been booked")
@@ -1819,7 +1819,7 @@ while answer.lower() == "y":
                         elif (int(row_choice) - 1) == 13:
                             row14Available -= 1
                         else:
-                            row15Available -= 1()
+                            row15Available -= 1
 
                         allSeats_chosen.append(seats_chose)
                         print(f"\nSeat {seats_chose} has been booked")
@@ -1876,7 +1876,7 @@ while answer.lower() == "y":
                         elif (int(row_choice) - 1) == 13:
                             row14Available -= 1
                         else:
-                            row15Available -= 1()
+                            row15Available -= 1
 
                         allSeats_chosen.append(seats_chose)
                         print(f"\nSeat {seats_chose} has been booked")

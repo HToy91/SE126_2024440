@@ -137,9 +137,6 @@ def menu():
 
     return menuInput
 
-
-
-
 time.sleep(1)#delays clearing terminal
 clear_terminal()
 
@@ -219,17 +216,48 @@ while flag == "green":
                         seatsA[int(rowPick) - 1] = "X"
                         ticketCounter += 1
                         seatsSold += 1
-                        row1Available -= 1
+
+                        if (int(rowPick) - 1) == 0:
+                            row1Available -= 1
+                        elif (int(rowPick) - 1) == 1:
+                            row2Available -= 1
+                        elif (int(rowPick) - 1) == 2:
+                            row3Available -= 1
+                        elif (int(rowPick) - 1) == 3:
+                            row4Available -= 1
+                        elif (int(rowPick) - 1) == 4:
+                            row5Available -= 1
+                        elif (int(rowPick) - 1) == 5:
+                            row6Available -= 1
+                        elif (int(rowPick) - 1) == 6:
+                            row7Available -= 1
+                        elif (int(rowPick) - 1) == 7:
+                            row8Available -= 1
+                        elif (int(rowPick) - 1) == 8:
+                            row9Available -= 1
+                        elif (int(rowPick) - 1) == 9:
+                            row10Available -= 1
+                        elif (int(rowPick) - 1) == 10:
+                            row11Available -= 1
+                        elif (int(rowPick) - 1) ==11:
+                            row12Available -= 1
+                        elif (int(rowPick) - 1) == 12:
+                            row13Available -= 1
+                        elif (int(rowPick) - 1) == 13:
+                            row14Available -= 1
+                        else:
+                            row15Available -= 1
+
                         seatsChosen.append(seatPick + rowPick)
                         print(f"\nSeat is booked! Amount due: ${totalCost:.2f}\n")
 
                     else: print("\nSeat is taken, please pick another seat\n")
                     time.sleep(2)#delays clearing terminal
                     clear_terminal()
+                #section a end-----------------------------------------------------------------
 
-
-                #section b --------------------------------------------------------------------   
-                elif seatPick == "b":
+                #section b --------------------------------------------------------------------
+                if seatPick == "b":
                     if seatsB[int(rowPick) - 1] != "X":
                         if int(rowPick) in {1,2,3,4,5}:
                             totalCost += row1_5Cost
@@ -238,10 +266,101 @@ while flag == "green":
                         elif int(rowPick) in {11,12,13,14,15}:
                             totalCost += row11_15Cost
 
-                        seatsB[rowPick - 1] = "X"
+                        seatsB[int(rowPick) - 1] = "X"
+                        ticketCounter += 1
+                        seatsSold += 1
+
+                        if (int(rowPick) - 1) == 0:
+                            row1Available -= 1
+                        elif (int(rowPick) - 1) == 1:
+                            row2Available -= 1
+                        elif (int(rowPick) - 1) == 2:
+                            row3Available -= 1
+                        elif (int(rowPick) - 1) == 3:
+                            row4Available -= 1
+                        elif (int(rowPick) - 1) == 4:
+                            row5Available -= 1
+                        elif (int(rowPick) - 1) == 5:
+                            row6Available -= 1
+                        elif (int(rowPick) - 1) == 6:
+                            row7Available -= 1
+                        elif (int(rowPick) - 1) == 7:
+                            row8Available -= 1
+                        elif (int(rowPick) - 1) == 8:
+                            row9Available -= 1
+                        elif (int(rowPick) - 1) == 9:
+                            row10Available -= 1
+                        elif (int(rowPick) - 1) == 10:
+                            row11Available -= 1
+                        elif (int(rowPick) - 1) ==11:
+                            row12Available -= 1
+                        elif (int(rowPick) - 1) == 12:
+                            row13Available -= 1
+                        elif (int(rowPick) - 1) == 13:
+                            row14Available -= 1
+                        else:
+                            row15Available -= 1
+
+                        seatsChosen.append(seatPick + rowPick)
                         print(f"\nSeat is booked! Amount due: ${totalCost:.2f}\n")
 
                     else: print("\nSeat is taken, please pick another seat\n")
+                    time.sleep(2)#delays clearing terminal
+                    clear_terminal()
+                #section b end-----------------------------------------------------------------
+
+                #section c --------------------------------------------------------------------
+                if seatPick == "c":
+                    if seatsC[int(rowPick) - 1] != "X":
+                        if int(rowPick) in {1,2,3,4,5}:
+                            totalCost += row1_5Cost
+                        elif int(rowPick) in {6,7,8,9,10}:
+                            totalCost += row6_10Cost
+                        elif int(rowPick) in {11,12,13,14,15}:
+                            totalCost += row11_15Cost
+
+                        seatsC[int(rowPick) - 1] = "X"
+                        ticketCounter += 1
+                        seatsSold += 1
+
+                        if (int(rowPick) - 1) == 0:
+                            row1Available -= 1
+                        elif (int(rowPick) - 1) == 1:
+                            row2Available -= 1
+                        elif (int(rowPick) - 1) == 2:
+                            row3Available -= 1
+                        elif (int(rowPick) - 1) == 3:
+                            row4Available -= 1
+                        elif (int(rowPick) - 1) == 4:
+                            row5Available -= 1
+                        elif (int(rowPick) - 1) == 5:
+                            row6Available -= 1
+                        elif (int(rowPick) - 1) == 6:
+                            row7Available -= 1
+                        elif (int(rowPick) - 1) == 7:
+                            row8Available -= 1
+                        elif (int(rowPick) - 1) == 8:
+                            row9Available -= 1
+                        elif (int(rowPick) - 1) == 9:
+                            row10Available -= 1
+                        elif (int(rowPick) - 1) == 10:
+                            row11Available -= 1
+                        elif (int(rowPick) - 1) ==11:
+                            row12Available -= 1
+                        elif (int(rowPick) - 1) == 12:
+                            row13Available -= 1
+                        elif (int(rowPick) - 1) == 13:
+                            row14Available -= 1
+                        else:
+                            row15Available -= 1
+
+                        seatsChosen.append(seatPick + rowPick)
+                        print(f"\nSeat is booked! Amount due: ${totalCost:.2f}\n")
+
+                    else: print("\nSeat is taken, please pick another seat\n")
+                    time.sleep(2)#delays clearing terminal
+                    clear_terminal()
+                #section a end-----------------------------------------------------------------
 
         else: print("INVALID ENTRY")
         time.sleep(1)#delays clearing terminal
@@ -361,6 +480,7 @@ while flag == "green":
             print("-------------------------------")
             change = abs(totalCost - enterAmount)
             print(f"Your change is ${change:.2f}")
+            print("\nHave a Great Day!")
 
             flag = "red"
 

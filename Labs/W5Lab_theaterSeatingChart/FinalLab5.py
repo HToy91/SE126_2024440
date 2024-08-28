@@ -139,7 +139,7 @@ def clear_terminal():
     os.system('cls' if os.name == 'nt' else 'clear')
 
 def menu():
-    print("Welcome to Ticket Master!")
+    print("Welcome to SeatMaster!")
     print("--------------------------------")
     print("1. Purchase Seat(s)\n2. View Total Ticket Sales\n3. View Sales Information\n4. Checkout\n5. Quit\n\n")
     mChoice = input("\nPlease select a Menu Option[1-5]: ")

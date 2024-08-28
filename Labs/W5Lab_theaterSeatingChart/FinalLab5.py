@@ -28,6 +28,7 @@ import csv
 import os
 import time
 
+#variable dictionary
 seatsA = []
 seatsB = []
 seatsC = []
@@ -82,6 +83,17 @@ row15Available = 30
 
 ticketCounter = 0
 seatsSold = 0
+
+#mChoice = input("\nPlease select a Menu Option[1-5]: ")
+#sChoice = input("\nPlease enter seat section: ").lower()
+#answer = "y"
+#menu_choice = menu()
+#section_choice = sectionFunction()
+#row_choice = rowFunction()
+#seats_chose = section_choice.upper() + row_choice
+#returnMenu = input("\nPress 'ENTER' to return to Main Menu: ")
+#seatsChosen_str = ', '.join(allSeats_chosen)
+#enterAmount = float(input("\nEnter Pay Amount: $"))
 
 #connects to csv file
 with open("Labs/W5Lab_theaterSeatingChart/seatingChart.csv") as csvfile:

@@ -1,3 +1,29 @@
+#Jose Vargas Figueroa
+#SE126 Midterm Lab 5
+#08/21/2024
+
+#Program Prompt: Write a program that can be used by a small theater to sell tickets for performances.  The theater’s auditorium has 15 rows of seats with 30 seats in each row. The program should display a screen that shows which seats are available and which are taken.  Seats thar are available are represented by # and seats that are taken are represent by a *. There are aisles after seats H and V. 
+
+# The program should display the above seating map, with # to denote open seats and * to denote taken seats.  The user must enter the row and seat numbers for tickets being sold.
+#Every time a ticket or group of tickets is purchased (meaning the user is prompted to enter the seat(s) they wish to choose) the program should also be also displaying the total ticket prices (see page 2 table for pricing) in addition to the current seating chart’s availability.
+#Use a menu to allow your user to do more than just purchase tickets:
+#	1. Purchase Seat(s)
+#	2. View Total Ticket Sales
+#	3. View Sales Information
+#	4. Checkout
+#	5. Quit
+#	The program should keep a total of all ticket sales. The user should be given an option of viewing this amount (menu 2). 
+#	The program should also give the user an option to see a list of how many seats have been sold, how many seats are available in each row, and how may seats are available in the entire theater (menu 3). 
+#	The program should allow the user to “check out” ie purchase their tickets. This option should show the user how many tickets they’ve purchased, along with a summary of the seats they’ve chosen, and the total cost for the tickets. Prompt the user for their amount, display their change, and then reset the customer ticket counter – this means a new customer could purchase more tickets without restarting the program, but the Total Ticket Sales and the View Sales Information will stay unchanged.
+
+
+#See rubric on next page for additional requirements, such as functions!
+
+#	The price for tickets are calculated using the following;
+#	Row 1 – Row 5 are  $200.00
+#	Row 6 – Row 10 are $175.00
+#	Row 11 – Row 15 are $150.00
+
 import csv
 import os
 import time
@@ -175,6 +201,8 @@ while answer.lower() == "y":
 
         section_choice = sectionFunction()
         row_choice = rowFunction()
+
+        #adds variable to combine section and row number for easier output
         seats_chose = section_choice.upper() + row_choice
 
         if section_choice in {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","1","2","3","4"}:
@@ -182,7 +210,9 @@ while answer.lower() == "y":
 
                 #section a----------------------------------------------------------------------------------------
                 if section_choice == "a":#------------------------------->CHANGE LINE
+                    #makes sure seat isn't already taken
                     if seatsA[int(row_choice) - 1] != "X":#------------------------------->CHANGE LINE
+                        #handles cost for row sections
                         if int(row_choice) in {1,2,3,4,5}:
                             totalCost += 200
                         elif int(row_choice) in {6,7,8,9,10}:
@@ -190,10 +220,12 @@ while answer.lower() == "y":
                         elif int(row_choice) in {11,12,13,14,15}:
                             totalCost += 150
 
+                        #if seat is picked, changes # to X
                         seatsA[int(row_choice) - 1] = "X"#------------------------------->CHANGE LINE
                         ticketCounter += 1
                         seatsSold += 1
 
+                        #seats available in each row counter
                         if (int(row_choice) - 1) == 0:
                             row1Available -= 1
                         elif (int(row_choice) - 1) == 1:
@@ -225,6 +257,7 @@ while answer.lower() == "y":
                         elif (int(row_choice) - 1) == 14:
                             row15Available -= 1
 
+                        #appends seats chosen to a list
                         allSeats_chosen.append(seats_chose)
                         print(f"\nSeat {seats_chose} has been booked")
 
@@ -1890,9 +1923,6 @@ while answer.lower() == "y":
                         clear_terminal()
                 #section 4----------------------------------------------------------------------------------------
         
-        
-        
-        
         else:
             print("INVALID ENTRY")
             time.sleep(1)#delays clearing terminal
@@ -1934,6 +1964,7 @@ while answer.lower() == "y":
         time.sleep(2)#delays clearing terminal
         clear_terminal()
 
+        #checks for invalid input
         while returnMenu != "":
             print("INVALID ENTRY")
             returnMenu = input("\nPress 'ENTER' to return to Main Menu: ")
@@ -1941,6 +1972,7 @@ while answer.lower() == "y":
             time.sleep(2)#delays clearing terminal
             clear_terminal()
 
+        #returns to main menu
         if returnMenu == "":
             menuInput = menu()
 
@@ -1989,6 +2021,7 @@ while answer.lower() == "y":
             clear_terminal()
 
     if menu_choice == "4":
+        #makes sure customer bought a ticket
         if totalCost >0:
             seatsChosen_str = ', '.join(allSeats_chosen)
             print(f"Total Amount Due: ${totalCost:.2f} for {ticketCounter} ticket(s)")
@@ -2001,6 +2034,7 @@ while answer.lower() == "y":
                 print("INVALID ENTRY")
                 enterAmount = float(input("Enter Pay Amount: $"))
             
+            #makes sure amount paid is more than amount due
             while enterAmount < totalCost:
                 time.sleep(1)
                 clear_terminal()

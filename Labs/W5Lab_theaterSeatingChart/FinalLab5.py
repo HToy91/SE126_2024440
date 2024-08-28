@@ -2015,14 +2015,14 @@ while answer.lower() == "y":
         print(f"Seats Available in Row 14: {row14Available}")
         print(f"Seats Available in Row 15: {row15Available}")
 
-        returnMenu = input("\nPress ENTER to return to Main Menu: ")
+        returnMenu = input("\nPress 'ENTER' to return to Main Menu: ")
 
         time.sleep(2)#delays clearing terminal
         clear_terminal()
 
         while returnMenu != "":
             print("INVALID ENTRY")
-            returnMenu = input("\nPress ENTER to return to Main Menu: ")
+            returnMenu = input("\nPress 'ENTER' to return to Main Menu: ")
 
             time.sleep(2)#delays clearing terminal
             clear_terminal()
@@ -2043,8 +2043,17 @@ while answer.lower() == "y":
                 enterAmount = float(input("\nEnter Pay Amount: $"))
 
             except ValueError:
+                time.sleep(1)#delays clearing terminal
+                clear_terminal()
+
                 print("INVALID ENTRY")
-                enterAmount = float(input("Enter Pay Amount: $"))
+
+                time.sleep(1)#delays clearing terminal
+                clear_terminal()
+                
+                print(f"Total Amount Due: ${totalCost:.2f} for {ticketCounter} ticket(s)")
+                print(f"Seats Chosen: {seatsChosen_str}")
+                enterAmount = float(input("\nEnter Pay Amount: $"))
             
             #makes sure amount paid is more than amount due
             while enterAmount < totalCost:
@@ -2062,8 +2071,17 @@ while answer.lower() == "y":
                     enterAmount = float(input("\nEnter Pay Amount: $"))
 
                 except ValueError:
+                    time.sleep(1)
+                    clear_terminal()
+
                     print("INVALID ENTRY")
-                    enterAmount = float(input("Enter Pay Amount: $"))
+
+                    time.sleep(1)
+                    clear_terminal()
+
+                    print(f"Total Amount Due: ${totalCost:.2f} for {ticketCounter} ticket(s)")
+                    print(f"Seats Chosen: {seatsChosen_str}")
+                    enterAmount = float(input("\nEnter Pay Amount: $"))
             else:
                 print("\nThank You for using SeatMaster")
                 print("-------------------------------")
@@ -2073,7 +2091,7 @@ while answer.lower() == "y":
 
                 answer = "n"
         else:
-            print("Please purchase ticket")
+            print("Please purchase ticket(s)")
 
             time.sleep(2)#delays clearing terminal
             clear_terminal()

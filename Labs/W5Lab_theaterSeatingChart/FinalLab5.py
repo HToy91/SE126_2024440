@@ -1955,7 +1955,7 @@ while answer.lower() == "y":
             time.sleep(1)#delays clearing terminal
             clear_terminal()
 
-            anotherPurchase = input("\nWould you like to purchase another ticket?[yes/no]: ").lower()
+            anotherPurchase = input("\nWould you like to purchase another ticket?[y/n]: ").lower()
 
         time.sleep(1)#delays clearing terminal
         clear_terminal()

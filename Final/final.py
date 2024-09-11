@@ -211,6 +211,9 @@ while answer.lower() == "y":
 
             else:
                 del_question = input("Are you sure[y/n]: ").lower()
+                time.sleep(1)
+                clear_terminal()
+                
                 while del_question not in {"y","n"}:
                     print("INVALID INPUT")
                     time.sleep(2)#delays clearing terminal
@@ -231,8 +234,13 @@ while answer.lower() == "y":
     #Menu option 3: Quit program
     else:
         quitProgram = input("Are you sure[y/n]: ").lower()
+        time.sleep(1)
+        clear_terminal()
         if quitProgram not in {"y","n"}:
             print("INVALID ENTRY")
+            time.sleep(1)
+            clear_terminal()
+
             quitProgram = input("Are you sure[y/n]: ").lower()
 
         if quitProgram == "y":

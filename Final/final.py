@@ -1,3 +1,4 @@
+import csv
 import os
 import time
 
@@ -12,6 +13,27 @@ phoneBook = {
 
 contacts = []
 numbers = []
+
+def saveContacts():
+    with open("Final/phonebook.csv", "w", newline = "") as file:
+        writer = csv.writer(file)
+        for name, number in phoneBook.items():
+            writer.writerow([name, number])
+
+def loadContacts():
+    global phoneBook
+    if os.path.exists("Final/phonebook.csv"):
+        with open("Final/phonebook.csv", "r") as file:
+            reader = csv.reader(file)
+            phoneBook.clear()
+            for row in reader:
+                if row:
+                    phoneBook[row[0]] = row[1]
+            contacts.clear()
+            numbers.clear()
+            for key, value in phoneBook.items():
+                contacts.append(key)
+                numbers.append(value)
 
 def clear_terminal():
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -68,11 +90,15 @@ def addDel_menu():
 
     return addDelChoice
 
+
+
 answer = "y"
 for key in phoneBook:
             #print(key)
             contacts.append(key)
             numbers.append(phoneBook[key])
+
+loadContacts()
 
 while answer.lower() == "y":
     menu_choice = menu()
@@ -94,7 +120,7 @@ while answer.lower() == "y":
                     contacts[index + 1] = temp
                     
         for i in range(0, len(contacts)):
-            print(contacts[i])
+            print(contacts[i].upper())
 
         contactSearch = input("\nEnter Contacts Name: ").lower()
         time.sleep(1)
@@ -113,7 +139,7 @@ while answer.lower() == "y":
             mid = int((min + max) / 2)
             
         if contactSearch == contacts[mid]:
-            print(contactSearch + ": " + phoneBook[contactSearch])
+            print(contactSearch.upper() + ": " + phoneBook[contactSearch])
 
         else:
             print("Contact not Found")
@@ -147,6 +173,9 @@ while answer.lower() == "y":
                 add_num = input("Enter Phone Number[(xxx) xxx-xxxx)]: ")
                 contacts.append(add_name)
                 phoneBook[f"{add_name}"] = add_num
+
+                saveContacts()
+
                 print(f"{add_name} Added!")
                 time.sleep(2)#delays clearing terminal
                 clear_terminal()
@@ -179,6 +208,9 @@ while answer.lower() == "y":
                     print(f"{del_name} DELETED")
                     contacts.remove(del_name)
                     del phoneBook[f"{del_name}"]
+
+                    saveContacts()
+
                     time.sleep(2)#delays clearing terminal
                     clear_terminal()
 

@@ -190,7 +190,7 @@ while answer.lower() == "y":
 
                 saveContacts()#Save updated phoneBook to CSV file
 
-                print(f"{add_name} Added!")
+                print(f"{add_name.upper()} Added!")
                 time.sleep(2)#delays clearing terminal
                 clear_terminal()
 
@@ -222,7 +222,7 @@ while answer.lower() == "y":
                     del_question = input("Are you sure[y/n]: ").lower()
 
                 if del_question == "y":
-                    print(f"{del_name} DELETED")
+                    print(f"{del_name.upper()} DELETED")
                     contacts.remove(del_name)
                     del phoneBook[f"{del_name}"]
 
